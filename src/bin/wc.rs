@@ -1,8 +1,6 @@
 extern crate regex;
-use regex::Regex;
 use std::env;
 use std::error::Error;
-use std::fmt;
 use std::fs;
 use std::process;
 
@@ -29,10 +27,7 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     Ok(())
 }
 
-pub fn count(config: Config) -> Result<String, Box<dyn Error>>
-// where
-// T: fmt::Display,
-{
+pub fn count(config: Config) -> Result<String, Box<dyn Error>> {
     let contents = fs::read_to_string(&config.filename)?;
     match config.mode {
         CountMode::Bytes => Ok(format!("{}\t{}", contents.bytes().count(), config.filename)),
