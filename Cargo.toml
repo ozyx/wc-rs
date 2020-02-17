@@ -10,5 +10,5 @@ edition = "2018"
 regex = "1"
 
 [[bin]]
-name = "wcrs"
+name = "wc-rs"
 path = "src/bin/wc.rs"
