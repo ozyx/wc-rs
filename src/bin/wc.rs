@@ -150,7 +150,7 @@ impl Config {
         }
 
         match args[2].as_str() {
-            "-c" => Ok(Config {
+            "-m" => Ok(Config {
                 filename: filename,
                 mode: CountMode::Characters,
             }),
@@ -162,7 +162,7 @@ impl Config {
                 filename: filename,
                 mode: CountMode::Lines,
             }),
-            "-b" => Ok(Config {
+            "-c" => Ok(Config {
                 filename: filename,
                 mode: CountMode::Bytes,
             }),
