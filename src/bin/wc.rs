@@ -1,4 +1,3 @@
-extern crate regex;
 use std::env;
 use std::error::Error;
 use std::fmt;
@@ -73,7 +72,7 @@ pub fn count_words<'a>(contents: &'a str) -> usize {
     let mut count: usize = 0;
 
     for line in contents.lines() {
-        count += line.split_whitespace().count();
+        count += line.split_ascii_whitespace().count();
     }
 
     count
