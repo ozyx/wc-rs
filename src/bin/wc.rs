@@ -86,18 +86,6 @@ pub struct FileStats {
     words: Option<usize>,
 }
 
-impl Default for FileStats {
-    fn default() -> Self {
-        Self {
-            filename: String::new(),
-            bytes: None,
-            lines: None,
-            chars: None,
-            words: None,
-        }
-    }
-}
-
 // To use the `{}` marker, the trait `fmt::Display` must be implemented
 // manually for the type.
 impl fmt::Display for FileStats {
